@@ -26,6 +26,12 @@ app.get("/no", (req, res) => {
   res.send({ message: 'This endpoint is meant to get no.'});
 });
 
+app.get("/haha", (req, res) => {
+  console.log("Hello world received another request.");
+
+  res.send({ message: 'This endpoint is meant to get hahahahahah.'});
+});
+
 const port = process.env.PORT || 8080;
 app.listen(port, () => {
   console.log("Hello world listening on port", port);
